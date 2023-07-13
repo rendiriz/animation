@@ -1,0 +1,28 @@
+.marquee {
+  gap: calc(clamp(10rem, 1rem + 25vmin, 30rem) / 14);
+  mask-image: linear-gradient(
+    var(--mask-direction, to right),
+    hsl(0 0% 0% / 0),
+    hsl(0 0% 0% / 1) 20%,
+    hsl(0 0% 0% / 1) 80%,
+    hsl(0 0% 0% / 0)
+  );
+}
+
+.marquee__group {
+  gap: calc(clamp(10rem, 1rem + 25vmin, 30rem) / 14);
+  animation: scroll-x 60s linear infinite;
+}
+
+.marquee__list {
+  width: clamp(10rem, 1rem + 25vmin, 30rem);
+}
+
+@keyframes scroll-x {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - calc(clamp(10rem, 1rem + 25vmin, 30rem) / 14)));
+  }
+}
