@@ -5,7 +5,7 @@ import { useAnimate, useInView, stagger } from 'framer-motion';
 
 const staggerItems = stagger(0.1);
 
-export default function ExamplePage() {
+export default function ScrollStaggerFadeInOut() {
   const [scope, animate] = useAnimate();
   const isInView = useInView(scope, {
     amount: 'some',

@@ -20,6 +20,14 @@ export default function HomePage() {
             </CardContent>
           </Card>
         </Link>
+
+        <Link href="/scroll-flip-image">
+          <Card>
+            <CardContent className="!p-4">
+              <p>Scroll Flip Image</p>
+            </CardContent>
+          </Card>
+        </Link>
       </div>
     </div>
   );

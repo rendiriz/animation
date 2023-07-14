@@ -4,11 +4,11 @@ import cn from 'classnames';
 import { ChevronLeft } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
-import Component from '@/components/example/scroll-stagger-fade-in-out';
+import Component from '@/components/example/scroll-flip-image';
 
 export const metadata: Metadata = {
-  title: 'Scroll Stagger Fade In Out',
-  description: 'Scroll Stagger Fade In Out',
+  title: 'Scroll Flip Image',
+  description: 'Scroll Flip Image',
 };
 
 export default function ExamplePage() {
@@ -29,7 +29,7 @@ export default function ExamplePage() {
         </h2>
 
         <div className="my-10">
-          {[0, 1, 2, 3, 4].map((item, idx) => (
+          {[0, 1].map((item, idx) => (
             <p key={idx} className="prose max-w-none">
               Synergistically develop corporate synergy before
               backward-compatible bandwidth. Proactively foster distinctive
@@ -56,8 +56,8 @@ export default function ExamplePage() {
         <Component />
 
         <div className="my-10">
-          {[0, 1, 2, 3, 4].map((item, idx) => (
-            <p key={idx}>
+          {[0, 1, 2, 3].map((item, idx) => (
+            <p key={idx} className="prose max-w-none">
               Synergistically develop corporate synergy before
               backward-compatible bandwidth. Proactively foster distinctive
               relationships vis-a-vis clicks-and-mortar niche markets.
