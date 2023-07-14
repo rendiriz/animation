@@ -12,6 +12,14 @@ export default function HomePage() {
             </CardContent>
           </Card>
         </Link>
+
+        <Link href="/scroll-stagger-fade-in-out">
+          <Card>
+            <CardContent className="!p-4">
+              <p>Scroll Stagger Fade In Out</p>
+            </CardContent>
+          </Card>
+        </Link>
       </div>
     </div>
   );
