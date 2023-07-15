@@ -23,6 +23,10 @@ const example = [
     id: 'ff5f56c9-ed2e-41cc-bf7a-82f033279a39',
     name: 'Text Slide Up',
   },
+  {
+    id: '4e3bc3f3-902b-4ebd-b7e4-a8bea920c3b4',
+    name: 'Hover Link Underline',
+  },
 ];
 
 export default function HomePage() {

@@ -1,9 +1,8 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
-import { motion, useAnimate, useScroll, useTransform } from 'framer-motion';
-import { parse } from 'path';
+import { motion } from 'framer-motion';
 
 const list = [
   {
