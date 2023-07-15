@@ -15,6 +15,10 @@ const example = [
     id: 'e9d1419a-03c9-41c6-9355-fd3db6350a54',
     name: 'Scroll Flip Image',
   },
+  {
+    id: '5cbbe060-e7a9-461b-9943-7acf7716fca2',
+    name: 'Hover Slide Right',
+  },
 ];
 
 export default function HomePage() {
