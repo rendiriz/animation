@@ -19,6 +19,10 @@ const example = [
     id: '5cbbe060-e7a9-461b-9943-7acf7716fca2',
     name: 'Hover Slide Right',
   },
+  {
+    id: 'ff5f56c9-ed2e-41cc-bf7a-82f033279a39',
+    name: 'Text Slide Up',
+  },
 ];
 
 export default function HomePage() {
