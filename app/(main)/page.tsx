@@ -31,6 +31,10 @@ const example = [
     id: '388470e8-40bc-47c3-824e-683e2461bded',
     name: 'Scroll Navbar Slide Down',
   },
+  {
+    id: '578894fa-071f-4de7-a33c-919e0f92491f',
+    name: 'Scroll Navbar Slide Down In View',
+  },
 ];
 
 export default function HomePage() {
