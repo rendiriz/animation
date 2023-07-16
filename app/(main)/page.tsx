@@ -27,6 +27,10 @@ const example = [
     id: '4e3bc3f3-902b-4ebd-b7e4-a8bea920c3b4',
     name: 'Hover Link Underline',
   },
+  {
+    id: '388470e8-40bc-47c3-824e-683e2461bded',
+    name: 'Scroll Navbar Slide Down',
+  },
 ];
 
 export default function HomePage() {
