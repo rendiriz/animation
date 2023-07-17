@@ -43,6 +43,10 @@ const example = [
     id: '58ceca9c-177c-4c77-b80d-cf245ae09dae',
     name: 'Cursor Custom Smooth',
   },
+  {
+    id: '7be878bd-1524-450e-8f5c-59d9735e8996',
+    name: 'Scroll Change Background',
+  },
 ];
 
 export default function HomePage() {
@@ -59,7 +63,7 @@ export default function HomePage() {
                   width="0"
                   height="0"
                   sizes="100vw"
-                  className="w-full h-auto rounded-2xl"
+                  className="w-full h-auto rounded-lg"
                 />
               </CardContent>
             </Card>
