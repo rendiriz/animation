@@ -212,7 +212,7 @@ export function Video() {
       playsInline
     >
       <source
-        src="https://www.apple.com/media/us/mac-pro/2013/16C1b6b5-1d91-4fef-891e-ff2fc1c1bb58/videos/macpro_main_desktop.mp4"
+        src="/animation/428ef744-f463-4d34-9500-f448988495fa.mp4"
         type="video/mp4"
       />
     </video>
