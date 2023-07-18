@@ -47,6 +47,10 @@ const example = [
     id: '7be878bd-1524-450e-8f5c-59d9735e8996',
     name: 'Scroll Change Background',
   },
+  {
+    id: '428ef744-f463-4d34-9500-f448988495fa',
+    name: 'Scroll Video Play',
+  },
 ];
 
 export default function HomePage() {

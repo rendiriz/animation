@@ -39,8 +39,6 @@ export function Banner({
   useEffect(() => {
     const { bottom } = ref.current.getBoundingClientRect();
     setBottom(bottom);
-
-    console.log(bottom);
   }, [ref]);
 
   return (
