@@ -23,8 +23,7 @@ export const VideoProvider = ({ children }: { children: React.ReactNode }) => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const wrapperRef = useRef<HTMLDivElement>(null);
-  const videoRef = useRef<HTMLDivElement>(null);
-  const windowSize = useRef([window.innerWidth, window.innerHeight]);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const [hookedYPostion, setHookedYPosition] = useState(0);
   const [videoHeight, setVideoHeight] = useState(0);
   const [isFixed, setIsFixed] = useState(false);
@@ -32,10 +31,18 @@ export const VideoProvider = ({ children }: { children: React.ReactNode }) => {
   const [top, setTop] = useState(0);
   const [bottom, setBottom] = useState(0);
 
+  const dimensionsRef = useRef<any>([]);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      dimensionsRef.current = [window.innerWidth, window.innerHeight];
+    }
+  }, []);
+
   return (
     <VideoContext.Provider
       value={{
-        windowSize,
+        dimensionsRef,
         sectionRef,
         containerRef,
         wrapperRef,
@@ -70,12 +77,12 @@ export function Section({ children }: { children: React.ReactNode }) {
 }
 
 export function SectionNext({ children }: { children: React.ReactNode }) {
-  const { windowSize, sectionRef } = useContext(VideoContext);
+  const { dimensionsRef, sectionRef } = useContext(VideoContext);
 
   return (
     <div
       ref={sectionRef}
-      style={{ marginTop: windowSize.current[1] }}
+      style={{ marginTop: dimensionsRef.current[1] }}
       className={cn('w-full mx-auto max-w-4xl', 'py-10')}
     >
       {children}
@@ -128,7 +135,7 @@ export function Container({ children }: { children: React.ReactNode }) {
 }
 
 export function Wrapper({ children }: { children: React.ReactNode }) {
-  const { windowSize, wrapperRef, videoHeight, isFixed, isBottom } =
+  const { dimensionsRef, wrapperRef, videoHeight, isFixed, isBottom } =
     useContext(VideoContext);
 
   return (
@@ -138,8 +145,8 @@ export function Wrapper({ children }: { children: React.ReactNode }) {
         translate: 'none',
         scale: 'none',
         rotate: 'none',
-        maxHeight: windowSize.current[1],
-        height: windowSize.current[1],
+        maxHeight: dimensionsRef.current[1],
+        height: dimensionsRef.current[1],
         transform: isBottom
           ? `translate(0px, ${videoHeight}px)`
           : 'translate(0px, 0px)',
@@ -161,7 +168,6 @@ export function Wrapper({ children }: { children: React.ReactNode }) {
 
 export function Video() {
   const {
-    windowSize,
     sectionRef,
     containerRef,
     wrapperRef,
@@ -173,7 +179,7 @@ export function Video() {
     hookedYPostion,
   } = useContext(VideoContext);
 
-  const handleLoadedMetadata = () => {
+  useEffect(() => {
     const duration = videoRef.current.duration;
     const height = Math.floor(duration) * playbackConst;
 
@@ -187,7 +193,7 @@ export function Video() {
     setVideoHeight(vidHeight);
     setTop(top + hookedYPostion);
     setBottom(bottom + hookedYPostion);
-  };
+  });
 
   useAnimationFrame(() => {
     const frameNumber = (hookedYPostion - top) / playbackConst;
@@ -204,7 +210,6 @@ export function Video() {
       )}
       preload="metadata"
       playsInline
-      onLoadedMetadata={handleLoadedMetadata}
     >
       <source
         src="https://www.apple.com/media/us/mac-pro/2013/16C1b6b5-1d91-4fef-891e-ff2fc1c1bb58/videos/macpro_main_desktop.mp4"
