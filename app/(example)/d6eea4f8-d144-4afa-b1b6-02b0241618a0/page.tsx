@@ -15,7 +15,7 @@ export default function ExamplePage() {
   return (
     <CursorProvider>
       <Link href="/">
-        <Button className="fixed top-4 left-4">
+        <Button className="fixed left-4 top-4">
           <ChevronLeft className="mr-2 h-4 w-4" />
           <span>Back</span>
         </Button>
@@ -23,9 +23,9 @@ export default function ExamplePage() {
 
       <Cursor />
 
-      <div className={cn('w-full mx-auto max-w-4xl', 'py-10')}>
-        <h1 className="text-5xl font-serif font-extrabold">Cursor Custom</h1>
-        <h2 className="text-4xl font-serif font-bold">
+      <div className={cn('mx-auto w-full max-w-4xl', 'py-10')}>
+        <h1 className="font-serif text-5xl font-extrabold">Cursor Custom</h1>
+        <h2 className="font-serif text-4xl font-bold">
           Globally matrix multidisciplinary imperatives for technically sound
           architectures
         </h2>

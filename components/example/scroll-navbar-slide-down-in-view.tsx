@@ -44,16 +44,16 @@ function ScrollNavbarSlideDown() {
         <div
           className={cn(
             'relative flex flex-wrap items-center justify-between',
-            'w-full mx-auto max-w-4xl',
+            'mx-auto w-full max-w-4xl',
             'py-4',
           )}
         >
           <Link
             href="/"
-            className="text-xl text-gray-800 no-underline whitespace-nowrap"
+            className="whitespace-nowrap text-xl text-gray-800 no-underline"
           >
             <svg
-              className="w-auto h-8 fill-black dark:fill-white"
+              className="h-8 w-auto fill-black dark:fill-white"
               viewBox="0 0 75 100"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -90,17 +90,17 @@ function ScrollNavbarSlideDown() {
           className={cn(
             'fixed flex flex-wrap items-center justify-between',
             'bg-slate-50/30 backdrop-blur-lg',
-            'w-full mx-auto max-w-4xl',
-            'px-8 py-4 rounded-full',
-            'top-4 left-1/2 -translate-x-1/2',
+            'mx-auto w-full max-w-4xl',
+            'rounded-full px-8 py-4',
+            'left-1/2 top-4 -translate-x-1/2',
           )}
         >
           <Link
             href="/"
-            className="text-xl text-gray-800 no-underline whitespace-nowrap"
+            className="whitespace-nowrap text-xl text-gray-800 no-underline"
           >
             <svg
-              className="w-auto h-8 fill-black dark:fill-white"
+              className="h-8 w-auto fill-black dark:fill-white"
               viewBox="0 0 75 100"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"

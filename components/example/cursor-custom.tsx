@@ -37,11 +37,11 @@ export function Cursor() {
     <motion.div
       ref={ref}
       className={cn(
-        'bg-green-800 text-white text-base',
+        'bg-green-800 text-base text-white',
         'fixed flex flex-row items-center justify-center text-center',
-        'w-[20px] h-[20px]',
-        'rounded-full pointer-events-none',
-        'top-0 left-0 z-[100]',
+        'h-[20px] w-[20px]',
+        'pointer-events-none rounded-full',
+        'left-0 top-0 z-[100]',
       )}
       style={{ x: mouse.x, y: mouse.y }}
     >

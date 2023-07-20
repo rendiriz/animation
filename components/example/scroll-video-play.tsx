@@ -83,7 +83,7 @@ export function SectionNext({ children }: { children: React.ReactNode }) {
     <div
       ref={sectionRef}
       style={{ marginTop: dimensionsRef.current[1] }}
-      className={cn('w-full mx-auto max-w-4xl', 'py-10')}
+      className={cn('mx-auto w-full max-w-4xl', 'py-10')}
     >
       {children}
     </div>
@@ -125,7 +125,7 @@ export function Container({ children }: { children: React.ReactNode }) {
         'main',
         'relative block',
         'w-full',
-        'm-0 inset-0',
+        'inset-0 m-0',
         'z-auto overflow-visible',
       )}
     >
@@ -157,7 +157,7 @@ export function Wrapper({ children }: { children: React.ReactNode }) {
         'w-full',
         'm-0 p-0',
         isFixed ? 'inset-auto' : '',
-        isFixed ? 'top-[0.34375px] left-0' : '',
+        isFixed ? 'left-0 top-[0.34375px]' : '',
         'translate-x-0 translate-y-0',
       )}
     >
@@ -205,7 +205,7 @@ export function Video() {
       ref={videoRef}
       className={cn(
         'relative block',
-        'w-full h-full object-cover',
+        'h-full w-full object-cover',
         'left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2',
       )}
       preload="metadata"

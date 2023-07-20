@@ -42,12 +42,12 @@ export default function HoverSlideRight() {
       {list.map((item, idx) => (
         <motion.div
           key={idx}
-          className="flex border-t pt-8 mb-8"
+          className="mb-8 flex border-t pt-8"
           onHoverStart={() => hoverStart(idx)}
           onHoverEnd={() => hoverEnd(idx)}
         >
           <motion.div
-            className="w-[400px] mr-8"
+            className="mr-8 w-[400px]"
             initial={{ opacity: 0, x: -260 }}
             animate={{
               opacity: isHovered[idx] ? 1 : 0,
@@ -61,7 +61,7 @@ export default function HoverSlideRight() {
               width="0"
               height="0"
               sizes="100vw"
-              className="w-full h-auto rounded-lg"
+              className="h-auto w-full rounded-lg"
             />
           </motion.div>
           <motion.div
@@ -71,7 +71,7 @@ export default function HoverSlideRight() {
             }}
             transition={{ ease: 'easeInOut', duration: 0.5 }}
           >
-            <h3 className="text-3xl font-serif font-bold">{item.name}</h3>
+            <h3 className="font-serif text-3xl font-bold">{item.name}</h3>
           </motion.div>
         </motion.div>
       ))}

@@ -55,7 +55,7 @@ const example = [
 
 export default function HomePage() {
   return (
-    <div className="w-full mx-auto max-w-4xl py-10">
+    <div className="mx-auto w-full max-w-4xl py-10">
       <div className="grid grid-cols-2 gap-4">
         {example.map((item, idx) => (
           <Link key={idx} href={`/${item.id}`}>
@@ -67,7 +67,7 @@ export default function HomePage() {
                   width="0"
                   height="0"
                   sizes="100vw"
-                  className="w-full h-auto rounded-lg"
+                  className="h-auto w-full rounded-lg"
                 />
               </CardContent>
             </Card>

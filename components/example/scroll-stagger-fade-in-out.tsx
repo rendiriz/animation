@@ -47,10 +47,10 @@ export default function ScrollStaggerFadeInOut() {
 
   return (
     <>
-      <div className="flex my-10" ref={scope}>
+      <div className="my-10 flex" ref={scope}>
         {[0, 1, 2].map((item, idx) => (
           <div key={idx} className="div">
-            <h2 className="text-4xl font-serif font-bold">
+            <h2 className="font-serif text-4xl font-bold">
               Globally matrix multidisciplinary imperatives for technically
               sound architectures
             </h2>

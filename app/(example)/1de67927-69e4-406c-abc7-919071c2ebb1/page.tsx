@@ -31,7 +31,7 @@ function ListItem({ children, className, ...props }: ListItemProps) {
       className={cn(
         'flex items-center justify-center',
         'bg-slate-50',
-        'p-8 rounded-lg',
+        'rounded-lg p-8',
         styles.marquee__list,
       )}
       {...props}
@@ -45,7 +45,7 @@ export default function LogoMarqueePage() {
   return (
     <>
       <Link href="/">
-        <Button className="fixed top-4 left-4">
+        <Button className="fixed left-4 top-4">
           <ChevronLeft className="mr-2 h-4 w-4" />
           <span>Back</span>
         </Button>
@@ -54,13 +54,13 @@ export default function LogoMarqueePage() {
       <div
         className={cn(
           'grid content-center',
-          'w-full min-h-screen',
+          'min-h-screen w-full',
           'text-gray-800',
           'overflow-hidden',
         )}
       >
         <div
-          className={cn('flex', 'overflow-hidden select-none', styles.marquee)}
+          className={cn('flex', 'select-none overflow-hidden', styles.marquee)}
         >
           {[0, 1].map((_, idx) => (
             <div
@@ -73,28 +73,28 @@ export default function LogoMarqueePage() {
               aria-hidden={idx > 0}
             >
               <ListItem>
-                <Github className={cn('w-[54px] h-[54px]')} />
+                <Github className={cn('h-[54px] w-[54px]')} />
               </ListItem>
               <ListItem>
-                <Gitlab className={cn('w-[54px] h-[54px]')} />
+                <Gitlab className={cn('h-[54px] w-[54px]')} />
               </ListItem>
               <ListItem>
-                <Figma className={cn('w-[54px] h-[54px]')} />
+                <Figma className={cn('h-[54px] w-[54px]')} />
               </ListItem>
               <ListItem>
-                <Framer className={cn('w-[54px] h-[54px]')} />
+                <Framer className={cn('h-[54px] w-[54px]')} />
               </ListItem>
               <ListItem>
-                <Dribbble className={cn('w-[54px] h-[54px]')} />
+                <Dribbble className={cn('h-[54px] w-[54px]')} />
               </ListItem>
               <ListItem>
-                <Codepen className={cn('w-[54px] h-[54px]')} />
+                <Codepen className={cn('h-[54px] w-[54px]')} />
               </ListItem>
               <ListItem>
-                <Codesandbox className={cn('w-[54px] h-[54px]')} />
+                <Codesandbox className={cn('h-[54px] w-[54px]')} />
               </ListItem>
               <ListItem>
-                <Twitter className={cn('w-[54px] h-[54px]')} />
+                <Twitter className={cn('h-[54px] w-[54px]')} />
               </ListItem>
             </div>
           ))}

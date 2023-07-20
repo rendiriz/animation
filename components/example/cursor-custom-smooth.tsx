@@ -102,11 +102,11 @@ export function Cursor() {
       ref={cursorRef}
       variants={variants}
       className={cn(
-        'bg-green-800 text-white text-base',
+        'bg-green-800 text-base text-white',
         'fixed flex flex-row items-center justify-center text-center',
-        'w-[20px] h-[20px]',
-        'rounded-full pointer-events-none',
-        'top-0 left-0 z-[100]',
+        'h-[20px] w-[20px]',
+        'pointer-events-none rounded-full',
+        'left-0 top-0 z-[100]',
       )}
       animate={cursorVariant}
       transition={spring}
@@ -129,11 +129,11 @@ export function BringBack() {
 
   return (
     <>
-      <h4 className="text-2xl font-serif font-bold">Bring Back</h4>
+      <h4 className="font-serif text-2xl font-bold">Bring Back</h4>
       <div className="grid grid-cols-2 gap-4">
         {listBringBack.map((item, idx) => (
           <div
-            className="p-16 z-[101]"
+            className="z-[101] p-16"
             key={idx}
             onMouseEnter={mouseEnter}
             onMouseLeave={mouseLeave}
@@ -144,7 +144,7 @@ export function BringBack() {
               width="0"
               height="0"
               sizes="100vw"
-              className="w-full h-auto"
+              className="h-auto w-full"
             />
           </div>
         ))}
@@ -169,7 +169,7 @@ export function WithText() {
   return (
     <>
       <h4
-        className="text-2xl font-serif font-bold"
+        className="font-serif text-2xl font-bold"
         onMouseEnter={mouseEnter}
         onMouseLeave={mouseLeave}
       >

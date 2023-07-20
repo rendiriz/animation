@@ -22,20 +22,22 @@ export default function ExamplePage() {
   return (
     <>
       <Link href="/">
-        <Button className="fixed top-4 left-4">
+        <Button className="fixed left-4 top-4">
           <ChevronLeft className="mr-2 h-4 w-4" />
           <span>Back</span>
         </Button>
       </Link>
 
-      <div className={cn('w-full mx-auto max-w-4xl', 'py-10')}>
-        <h1 className="text-5xl font-serif font-extrabold">
+      <div className={cn('mx-auto w-full max-w-4xl', 'py-10')}>
+        <h1 className="font-serif text-5xl font-extrabold">
           Scroll Video Play
         </h1>
-        <h2 className="text-4xl font-serif font-bold">
+        <h2 className="font-serif text-4xl font-bold">
           Globally matrix multidisciplinary imperatives for technically sound
           architectures
         </h2>
+
+        <div className="p-4 pt-2">asd</div>
 
         <div className="my-10">
           {[0, 1].map((item, idx) => (
@@ -73,7 +75,7 @@ export default function ExamplePage() {
         </Section>
 
         <SectionNext>
-          <h2 className="text-4xl font-serif font-bold">
+          <h2 className="font-serif text-4xl font-bold">
             Globally matrix multidisciplinary imperatives for technically sound
             architectures
           </h2>

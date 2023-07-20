@@ -57,7 +57,7 @@ export default function ScrollFlipImage() {
       <div className="my-10" ref={scope}>
         {list.map((item, idx) => (
           <div key={idx} className="overflow-hidden">
-            <h3 className="h3 text-3xl font-serif font-bold leading-normal uppercase">
+            <h3 className="h3 font-serif text-3xl font-bold uppercase leading-normal">
               {item.name}
             </h3>
           </div>

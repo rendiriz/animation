@@ -15,14 +15,14 @@ export default function ExamplePage() {
   return (
     <>
       <Link href="/">
-        <Button className="fixed top-4 left-4">
+        <Button className="fixed left-4 top-4">
           <ChevronLeft className="mr-2 h-4 w-4" />
           <span>Back</span>
         </Button>
       </Link>
 
-      <div className={cn('w-full mx-auto max-w-4xl')}>
-        <div className="grid place-items-center h-screen">
+      <div className={cn('mx-auto w-full max-w-4xl')}>
+        <div className="grid h-screen place-items-center">
           <Component />
         </div>
       </div>

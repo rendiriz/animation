@@ -63,7 +63,7 @@ export function Background() {
       className={cn(
         'bg-foreground text-white',
         'absolute',
-        'w-full h-screen',
+        'h-screen w-full',
         'z-10',
       )}
       initial={{ scaleY: 1 }}

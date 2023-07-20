@@ -35,7 +35,7 @@ export default function ScrollFlipImage() {
           width="0"
           height="0"
           sizes="100vw"
-          className="w-full h-auto rounded-2xl"
+          className="h-auto w-full rounded-2xl"
         />
       </motion.div>
     </>
